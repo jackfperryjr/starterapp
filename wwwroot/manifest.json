@@ -1,0 +1,17 @@
+{
+    "name": "StarterApp",
+    "short_name": "StarterApp",
+    "description": "The most awesome starter app in the world",
+    "icons": [
+      {
+        "src": "/images/icons/user-default.png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/images/icons/user-default.png",
+        "sizes": "512x512"
+      }
+    ],
+    "display": "standalone",
+    "start_url": "/"
+  }
