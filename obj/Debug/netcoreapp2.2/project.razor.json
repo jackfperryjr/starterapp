@@ -3215,6 +3215,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Areas/Identity/Pages/Account/Manage/Users.cshtml",
+      "TargetPath": "Areas/Identity/Pages/Account/Manage/Users.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml",
       "TargetPath": "Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml",
       "FileKind": "mvc"

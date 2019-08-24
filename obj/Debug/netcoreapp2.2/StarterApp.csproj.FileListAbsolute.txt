@@ -130,3 +130,4 @@
 /Users/jackperryjr/Desktop/CoffeeShopDevelopers/starterapp/obj/Debug/netcoreapp2.2/StarterApp.dll
 /Users/jackperryjr/Desktop/CoffeeShopDevelopers/starterapp/obj/Debug/netcoreapp2.2/StarterApp.pdb
 /Users/jackperryjr/Desktop/CoffeeShopDevelopers/starterapp/obj/Debug/netcoreapp2.2/StarterApp.csproj.CopyComplete
+/Users/jackperryjr/Desktop/CoffeeShopDevelopers/starterapp/obj/Debug/netcoreapp2.2/Razor/Areas/Identity/Pages/Account/Manage/Users.g.cshtml.cs
