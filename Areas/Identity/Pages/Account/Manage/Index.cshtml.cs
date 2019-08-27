@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
@@ -166,6 +167,52 @@ namespace StarterApp.Areas.Identity.Pages.Account.Manage
                     throw new InvalidOperationException($"Unexpected error occurred setting phone number for user with ID '{userId}'.");
                 }
             }
+
+            /*****************************************************************
+            
+            Below is an example of how I'm changing a user's picture in another app.
+
+            I have a blob storage account in Azure that I'm uploading the image to
+            and then saving the path to that image in the database.
+
+            In order for this to work you'd have to inject IConfiguration and store
+            your credentials in Azure. There's other ways of doing this, but I wanted
+            to share how I'm doing it for those looking to learn. Currently the app 
+            will allow you to click and change the user's picture from the interface
+            but nothing will be saved unless you have something like this.
+
+            *****************************************************************/
+
+            // Start of image upload code block
+
+            // var account = _configuration["AzureStorageConfig:AccountName"];
+            // var key = _configuration["AzureStorageConfig:AccountKey"];
+            // var storageCredentials = new StorageCredentials(account, key);
+            // var cloudStorageAccount = new CloudStorageAccount(storageCredentials, true);
+            // var cloudBlobClient = cloudStorageAccount.CreateCloudBlobClient();
+            // var container = cloudBlobClient.GetContainerReference("images");
+            // await container.CreateIfNotExistsAsync();
+
+            // if (Input.Picture != user.Picture)
+            // {
+            //     var files = HttpContext.Request.Form.Files;
+
+            //     if (files.Count != 0) 
+            //     {
+            //         var extension = Path.GetExtension(files[0].FileName);
+            //         var newBlob = container.GetBlockBlobReference("User-" + user.Id + extension);
+
+            //         using (var filestream = new MemoryStream())
+            //         {
+            //             files[0].CopyTo(filestream);
+            //             filestream.Position = 0;
+            //             await newBlob.UploadFromStreamAsync(filestream);
+            //         }
+            //         user.Picture = "whatever-url-to-your-blob/User-" + user.Id + extension;
+            //     }
+            // }
+            //
+            // End of image upload code block
 
             //await _signInManager.RefreshSignInAsync(user);
             await _userManager.UpdateAsync(user);
