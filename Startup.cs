@@ -37,7 +37,6 @@ namespace StarterApp
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-                //.AddDefaultTokenProviders();
 
             services.AddAuthorization(options => 
             {
@@ -45,7 +44,7 @@ namespace StarterApp
             });   
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            services.AddProgressiveWebApp();
+            //services.AddProgressiveWebApp(); Comment this in to turn on the service worker for PWAs.
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

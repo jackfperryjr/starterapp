@@ -15,9 +15,11 @@
         <div class="col-md-4" style="margin:0 auto;">
             <label>
                 <img id="img-output" class="img-user" src="@user.Picture" title="Picture of you!" style="cursor:pointer;">
+                <div class="img-user-overlay">
+                    <i class="fas fa-camera" title="Change Image" style="cursor:pointer;"></i> 
+                </div>
                 <input asp-for="Picture" id="img-input" type="file" accept="image/*" name="picture" style="display:none;" />
             </label>
-            <p style="font-size:12px;margin-top:-15px;">click to change image</p>
             <span asp-validation-for="Picture" class="text-danger"></span>
         </div>
     </div>
@@ -30,10 +32,23 @@
             <div class="form-group">
                 <div class="input-group">
                     <input asp-for="Input.Email" class="form-control" />
-                    <span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-ok text-success"></span></span>
+                    <span class="input-group-addon" aria-hidden="true"><span class="text-success"></span></span>
                 </div>
                 <span asp-validation-for="Input.Email" class="text-danger"></span>
             </div>
+            <div class="form-group">
+                <input asp-for="Input.City" class="form-control" placeholder="City" value="@user.City" />
+            </div>
+            <div class="form-group">
+                <input asp-for="Input.State" class="form-control" placeholder="State" value="@user.State" />
+            </div>
+            <div class="form-group">
+                <input asp-for="Input.ZipCode" class="form-control" placeholder="ZipCode" value="@user.ZipCode.ToString()" />
+                <span asp-validation-for="Input.ZipCode" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-4" style="margin:0 auto 0 0;">
+            <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
                 <div class="form-inline">
                     <input asp-for="Input.FirstName" class="form-control" style="width: 45%; margin-right: 10%;" placeholder="First" />
@@ -41,21 +56,16 @@
                 </div>
             </div>
             <div class="form-group">
-                <input asp-for="Input.PhoneNumber" class="form-control" placeholder="(000) 000-0000" />
+                <input type="date" asp-for="Input.BirthDate" class="form-control" value="@user.BirthDate.ToString("yyyy-MM-dd")" />
+                <span asp-validation-for="Input.BirthDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="Input.Age" class="form-control" placeholder="Age" value="@user.Age.ToString()" />
+                <span asp-validation-for="Input.Age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="Input.PhoneNumber" class="form-control" placeholder="(000) 000-0000" value="@user.PhoneNumber" />
                 <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="col-md-4" style="margin:0 auto 0 0;">
-            <div asp-validation-summary="All" class="text-danger"></div>
-            <div class="form-group">
-                <input asp-for="Input.City" class="form-control" placeholder="City" />
-            </div>
-            <div class="form-group">
-                <input asp-for="Input.State" class="form-control" placeholder="State" />
-            </div>
-            <div class="form-group">
-                <input asp-for="Input.ZipCode" class="form-control" placeholder="ZipCode" value="" />
-                <span asp-validation-for="Input.ZipCode" class="text-danger"></span>
             </div>
         </div>
     </div>

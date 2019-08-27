@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "c6fd678e185ab851f39efcb8c92111a0936189a7"
+    "signature": "659965c0069c370a8f67fd8a71c1323ca9796bb7"
   },
   "compilationOptions": {
     "defines": [
@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v2.2": {
       "StarterApp/1.0.0": {
         "dependencies": {
+          "Font.Awesome": "5.10.0",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "2.2.3",
@@ -38,6 +39,7 @@
           "StarterApp.dll": {}
         }
       },
+      "Font.Awesome/5.10.0": {},
       "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp": "2.8.0",
@@ -3785,6 +3787,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Font.Awesome/5.10.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9HRPrPDQue2G98U57lIZsmSIZVBV/0kjalvo+5hJWxN9PhhzAux9qHWpjUQuderbNpktqJegXGZEGeXC8w4a3Q==",
+      "path": "font.awesome/5.10.0",
+      "hashPath": "font.awesome.5.10.0.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
       "type": "package",

@@ -65,3 +65,32 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
 }
+
+.img-user-overlay {
+  margin: 32px auto;
+  position: absolute;
+  bottom: 0;
+  height: 200px;
+  width: 200px;
+  transition: .1s ease;
+}
+
+.fa-camera {
+  color: rgba(0,0,0,.5);
+  font-size: 25px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  /* transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); */
+  text-align: center;
+}
+
+::placeholder {
+  color: #eceff1;
+}
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
