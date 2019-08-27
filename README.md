@@ -1,4 +1,4 @@
-# <img src="wwwroot/images/icons/starterapp.png" width="30"> starterapp
+# <img src="wwwroot/images/icons/starterapp.png" width="50"> starterapp
 
 ### I really like building things with .NET Core
 
