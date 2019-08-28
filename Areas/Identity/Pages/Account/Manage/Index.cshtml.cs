@@ -131,7 +131,7 @@ namespace StarterApp.Areas.Identity.Pages.Account.Manage
                 user.State = Input.State;
             }
 
-            if (Input.ZipCode != user.ZipCode)
+            if (Input.ZipCode.HasValue && Input.ZipCode != user.ZipCode)
             {
                 user.ZipCode = Input.ZipCode;
             }
