@@ -59,7 +59,6 @@ namespace StarterApp.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
-            public int? ZipCode { get; set; } = 00000;
         }
 
         public void OnGet(string returnUrl = null)
